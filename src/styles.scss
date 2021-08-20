@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import '~ngx-org-chart/_theming.scss';
+.jxPOhn{
+    display: flex;
+    margin-top: 14px;
+    position: relative;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.jlzTty{
+    width: 50px;
+    height: 50px;
+    order: 2;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 40%) 2px 2px 6px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    z-index: 200;
+    display: block;
+    border: 0px;
+    background: rgb(77, 194, 71) !important;
+}
