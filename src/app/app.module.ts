@@ -6,27 +6,41 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
-import { NgxOrgChartModule } from 'ngx-org-chart';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { App1SharedModule} from '../../projects/project/src/app/app.module'
+import { SafePipeModule } from 'safe-pipe';
+import { BrowserModule } from '@angular/platform-browser'
+import { CommonModule } from "@angular/common";
+import { DetailsComponent } from './details/details.component';
 
+import {SafePipe} from './pipes/safe.pipe'
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
     schemas:[CUSTOM_ELEMENTS_SCHEMA],
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,   
+        DetailsComponent,  
+        SafePipe, 
     ],
     imports: [
         BrowserAnimationsModule,
         NgbModule,
-        FormsModule,
+        FormsModule, 
+        
+        BrowserModule,    
+        CommonModule, 
+        SafePipeModule,  
         RouterModule,
         AppRoutingModule,
-        NgxOrgChartModule,
         App1SharedModule.forRoot(), 
         ComponentsModule,
-        ExamplesModule
+        HttpClientModule,
+        ExamplesModule,
+        
+    ],
+    exports: [
     ],
     providers: [],
     bootstrap: [AppComponent]

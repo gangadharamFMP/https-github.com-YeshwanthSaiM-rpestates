@@ -1,0 +1,174 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('https://rpestates.com/wp-content/uploads/2019/12/hero6-1-1024x576.jpg.webp');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">RP ESTATES</h1>
+                <div class="text-center">
+                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="details">
+
+</section>
+
+<ngx-org-chart [nodes]="nodes" direction="vertical" (itemClick)="test($event)"></ngx-org-chart>
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 ml-auto col-xl-6 mr-auto">
+                <p class="category p-2">Gallery</p>
+
+                <div class="card">
+                    <img src="../../assets/img/bg3.jpg">
+                </div>
+
+            </div>
+
+            <div class="col-md-10 ml-auto col-xl-6 mr-auto">
+                <p class="category p-2">Videos</p>
+
+                <!-- Tabs with Background on Card -->
+                <div class="card">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+                <!-- End Tabs on plain Card -->
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section>
+
+    <!--  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div style="width: 100%;">
+                    <h4>
+                        Virtual Tour
+                    </h4>
+                </div>
+                <iframe style="max-width:100%;width:100%;height:430px;" [src]="iFrameModel | safe : 'resourceUrl'" frameborder="0"
+            allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowvr="true"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr">
+        </iframe>
+            </div>
+            <div class="col-md-6">
+                <h4>Features</h4>
+                <p>A fine selection of residential plots for sale. Wonderful destination strategically chosen for its
+                    connectivity and potential for growth. The residential land is complete with all necessary
+                    infrastructures that is needed for a fulfilling life.</p>
+                <p _ngcontent-serverapp-c393="">A fine selection of residential plots for sale. Wonderful destination
+                    strategically chosen for its connectivity and potential for growth. The residential land is complete
+                    with all necessary infrastructures that is needed for a fulfilling life.</p>
+                <p _ngcontent-serverapp-c393="">A fine selection of residential plots for sale. Wonderful destination
+                    strategically chosen for its connectivity and potential for growth. The residential land is complete
+                    with all necessary infrastructures that is needed for a fulfilling life.</p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<section class="content-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Features</h4>
+                <div>
+                    <h6>Property Type : Individual House</h6>
+                    <h6>Property size : 605 sqyrd</h6>
+                    <h6>Property Status : For Sale</h6>
+                    <h6>Bedrooms: 2</h6>
+                    <h6>Bathrooms: 1</h6>
+                    <h6>Year Built: 2021</h6>
+                </div>
+                <h4>Address</h4>
+                <address>
+                    <h6>Street:</h6>
+                    Nayarankhed
+                    Karamungi,
+                    Sanga Reddy,
+                    Hyderabad,
+                    Telangana
+                    <h6>City: Hyderabad</h6>
+                    <h6>Zip Code: 502286</h6>
+                </address>
+            </div>
+
+            <div class="col-sm-6">
+                <div style="width: 100%;">
+                    <h4>
+                        3D Model View
+                    </h4>
+                </div>
+                <model-viewer style="width:100%;height:80vh" src="../../../assets/models/sample floor plan/scene.gltf"
+                    alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look"
+                    environment-image="neutral" auto-rotate camera-controls></model-viewer>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section>
+    <div class="container">
+        <div class="container">
+            <div id="img-id" class="img-container">
+                <svg [attr.viewBox]="viewBoxSize" height="100%" width="100%" version="1.1"
+                    [ngStyle]="{'background-image': 'url(' + mapPath + ')'}" style="background-size: cover">
+                    <!--Available-->
+                   
+                    <path class="path" id="one" data-desc="Booked" *ngFor="let vacanyobj of vacancy" [attr.d]="vacanyobj.path"
+                        (click)="getStatus(vacanyobj.phase,vacanyobj.plot,vacanyobj.status)" />
+        
+                </svg>
+            </div>
+        </div>
+        <div class="desc-container" style="top:240px; left:530px;">
+        
+        </div>
+        <ng-template #available>
+            <h2>Available</h2>
+        </ng-template>
+        <ng-template #booked>
+            <h2>Booked</h2>
+        </ng-template>
+        
+        <ng-template #availablelink>
+            <h2>Available</h2>
+            <button>
+                <a mat-list-item [href]="forwardLink">
+                    <span>{{forwardName}}</span>
+                </a>
+            </button>
+        </ng-template>
+
+    </div>
+</section>
+<footer class="footer footer-default">
+    <div class="container">
+
+        <div class="copyright">
+            &copy;
+            2021, Designed and Coded by
+            <a href="https://www.creative-tim.com" target="_blank">Find My Properties</a>.
+        </div>
+    </div>
+</footer>

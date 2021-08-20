@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { AgmCoreModule } from '@agm/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { NgxOrgChartModule } from 'ngx-org-chart';
 
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
     imports: [
         CommonModule,
         FormsModule,
+        NgxOrgChartModule,
         NgbModule,
         NouisliderModule,
         JwBootstrapSwitchNg2Module,

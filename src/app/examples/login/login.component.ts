@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     if (data && this.mobile == data.mobile && this.password == data.password) {
        
         localStorage.setItem("loggedIn","true")
-      this.router.navigateByUrl("home");
+      this.router.navigateByUrl("details");
     } else {
       alert("invalid credentials");
     }

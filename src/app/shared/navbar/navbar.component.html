@@ -72,8 +72,9 @@
         <li class="nav-item" *ngIf="!isloggedIn">
           <a class="nav-link" href="/login">
             <i class="now-ui-icons files_paper"></i>
-            <p>Login</p>
-
+            <p *ngIf="!isloggedIn">Login</p>
+            <p *ngIf="isloggedIn" (click)="logout()">Logout</p>
+          
           </a>
         </li>
 

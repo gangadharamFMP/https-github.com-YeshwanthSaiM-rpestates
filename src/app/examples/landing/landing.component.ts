@@ -6,6 +6,7 @@ import * as Rellax from 'rellax';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
+
 export class LandingComponent implements OnInit {
   data : Date = new Date();
   focus;
