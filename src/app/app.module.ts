@@ -16,13 +16,16 @@ import { DetailsComponent } from './details/details.component';
 
 import {SafePipe} from './pipes/safe.pipe'
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { VirtualTourComponent } from './virtual-tour/virtual-tour.component';
+import { View3DModelComponent } from './view3-dmodel/view3-dmodel.component';
+import { VacancyComponent } from './vacancy/vacancy.component';
 @NgModule({
     schemas:[CUSTOM_ELEMENTS_SCHEMA],
     declarations: [
         AppComponent,
         NavbarComponent,   
         DetailsComponent,  
-        SafePipe, 
+        SafePipe, VirtualTourComponent, View3DModelComponent, VacancyComponent, 
     ],
     imports: [
         BrowserAnimationsModule,

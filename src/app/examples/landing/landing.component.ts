@@ -23,8 +23,28 @@ export class LandingComponent implements OnInit {
         {
           name: 'Varsha',
           cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
+         
           title: 'HR',
+          childs: [
+            {
+              name: 'Yagnesh',
+              cssClass: 'ngx-org-ceo',
+             
+              title: 'HR',
+            },
+            {
+              name: 'Bharghav',
+              cssClass: 'ngx-org-ceo',
+             
+              title: 'HR',
+            },
+            {
+              name: 'Narayana',
+              cssClass: 'ngx-org-ceo',
+             
+              title: 'HR',
+            }
+          ]
         }
       ]
     }]

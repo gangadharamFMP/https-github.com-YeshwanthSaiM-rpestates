@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="container">
+        <div id="img-id" class="img-container">
+            <svg [attr.viewBox]="viewBoxSize" height="100vh" width="100vh" version="1.1"
+                [ngStyle]="{'background-image': 'url(' + mapPath + ')'}" style="background-size: cover;height: 160vh;">
+                <!--Available-->
+               
+                <path class="path" id="one" data-desc="Booked" *ngFor="let vacanyobj of vacancy" [attr.d]="vacanyobj.path"
+                    (click)="getStatus(vacanyobj.phase,vacanyobj.plot,vacanyobj.status)" />
+    
+            </svg>
+        </div>
+    </div>
+    <div class="desc-container" style="top:240px; left:530px;">
+    
+    </div>
+    <ng-template #available>
+        <h2>Available</h2>
+    </ng-template>
+    <ng-template #booked>
+        <h2>Booked</h2>
+    </ng-template>
+    
+    <ng-template #availablelink>
+        <h2>Available</h2>
+        <button>
+            <a mat-list-item [href]="forwardLink">
+                <span>{{forwardName}}</span>
+            </a>
+        </button>
+    </ng-template>
+
+</div>

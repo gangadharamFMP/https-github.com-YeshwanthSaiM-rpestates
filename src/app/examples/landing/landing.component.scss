@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px) {
+  .nav-tabs {
+    padding: 0 !important;
+  }
+  .card-footer {
+    display: flex;
+  }
+  .card-img{
+    display: block !important;
+}
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.card-img{
+    display: flex;
+}
