@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+  }
+  .img-container {
+  flex: 1;
+  background-size: cover;
+  }
+  .desc-container{
+    position: absolute;
+  }
+  path{
+    stroke-width: 5px;
+  }
+  path {
+    fill: transparent;
+    transition: 1s;
+    stroke: transparent;
+    stroke-width: 0.5px;
+    opacity: 1;
+  }
+  
+  #screen:hover {
+    fill: rgb(19, 18, 18);
+  }
+  #one:hover {
+    stroke: rgb(24, 23, 23);
+    fill: rgba(245, 243, 140, 0.5);
+    stroke-width: 3px;
+  }
+
+  #two:hover {
+    stroke: rgb(70, 29, 252);
+    stroke-width: 3px;
+  }

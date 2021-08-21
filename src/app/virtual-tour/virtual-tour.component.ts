@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VirtualTourComponent implements OnInit {
 
   constructor() { }
-  iFrameModel = "https://www.klapty.com/tour/tunnel/Fpu0P7qcMs";
+  iFrameModel = "https://www.klapty.com/tour/LJ90BsNmT5";
 
   ngOnInit(): void {
   }

@@ -45,7 +45,7 @@ export class VacancyComponent implements OnInit {
     "../../../assets/vacancy/" + this.projectName + "/vacancy.json";
   vacancy: any;
   viewBoxSize: any;
-  iFrameModel = "https://www.klapty.com/tour/tunnel/Fpu0P7qcMs";
+  iFrameModel = "https://www.klapty.com/tour/LJ90BsNmT5";
   closeResult: string;
   forwardLink: any;
   forwardName: any;
@@ -77,7 +77,7 @@ export class VacancyComponent implements OnInit {
     console.log(plotno);
     console.log(status);
 
-    this.openModal(this.availablelink, "modal_mini", "");
+    // this.openModal(this.availablelink, "modal_mini", "");
 
     if (status == "available") {
       this.openModal(this.available, "modal_mini", "");

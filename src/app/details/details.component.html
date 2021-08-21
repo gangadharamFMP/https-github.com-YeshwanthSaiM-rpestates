@@ -32,7 +32,7 @@
                 <p class="category p-2">Gallery</p>
 
                 <div class="card">
-                    <img src="../../assets/img/bg3.jpg">
+                    <img src="../../assets/img/project images/1-medium.jpg">
                 </div>
 
             </div>
@@ -42,7 +42,7 @@
 
                 <!-- Tabs with Background on Card -->
                 <div class="card">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/tMuJukV1R9Y">
                     </iframe>
                 </div>
                 <!-- End Tabs on plain Card -->
@@ -91,23 +91,21 @@
             <div class="col-md-6">
                 <h4>Features</h4>
                 <div>
-                    <h6>Property Type : Individual House</h6>
-                    <h6>Property size : 605 sqyrd</h6>
+                    <h6>Property Type : Open Land</h6>
+                    <h6>Property size : 200 sqyrd</h6>
                     <h6>Property Status : For Sale</h6>
-                    <h6>Bedrooms: 2</h6>
-                    <h6>Bathrooms: 1</h6>
-                    <h6>Year Built: 2021</h6>
+                    <h6>Developments: 100% done</h6>
                 </div>
                 <h4>Address</h4>
                 <address>
                     <h6>Street:</h6>
-                    Nayarankhed
-                    Karamungi,
-                    Sanga Reddy,
+                    Burgula Village
+                    Shad Nagar,
+                    Randa Reddy,
                     Hyderabad,
                     Telangana
                     <h6>City: Hyderabad</h6>
-                    <h6>Zip Code: 502286</h6>
+                    <h6>Zip Code: 509216</h6>
                 </address>
             </div>
 
@@ -117,7 +115,7 @@
                         3D Model View
                     </h4>
                 </div>
-                <model-viewer style="width:100%;height:80vh" src="../../../assets/models/sample floor plan/scene.gltf"
+                <model-viewer style="width:100%;height:80vh" src="../../../assets/models/sample land/3.glb"
                     alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look"
                     environment-image="neutral" auto-rotate camera-controls></model-viewer>
             </div>
@@ -125,39 +123,4 @@
 
     </div>
 
-</section>
-<section>
-    <div class="container">
-        <div class="container">
-            <div id="img-id" class="img-container">
-                <svg [attr.viewBox]="viewBoxSize" height="100%" width="100%" version="1.1"
-                    [ngStyle]="{'background-image': 'url(' + mapPath + ')'}" style="background-size: cover">
-                    <!--Available-->
-                   
-                    <path class="path" id="one" data-desc="Booked" *ngFor="let vacanyobj of vacancy" [attr.d]="vacanyobj.path"
-                        (click)="getStatus(vacanyobj.phase,vacanyobj.plot,vacanyobj.status)" />
-        
-                </svg>
-            </div>
-        </div>
-        <div class="desc-container" style="top:240px; left:530px;">
-        
-        </div>
-        <ng-template #available>
-            <h2>Available</h2>
-        </ng-template>
-        <ng-template #booked>
-            <h2>Booked</h2>
-        </ng-template>
-        
-        <ng-template #availablelink>
-            <h2>Available</h2>
-            <button>
-                <a mat-list-item [href]="forwardLink">
-                    <span>{{forwardName}}</span>
-                </a>
-            </button>
-        </ng-template>
-
-    </div>
 </section>

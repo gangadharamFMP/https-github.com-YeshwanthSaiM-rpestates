@@ -44,7 +44,7 @@ export class DetailsComponent implements OnInit {
     "../../../assets/vacancy/" + this.projectName + "/vacancy.json";
   vacancy: any;
   viewBoxSize: any;
-  iFrameModel = "https://www.klapty.com/tour/tunnel/Fpu0P7qcMs";
+  iFrameModel = "https://www.klapty.com/tour/LJ90BsNmT5";
   closeResult: string;
   forwardLink: any;
   forwardName: any;

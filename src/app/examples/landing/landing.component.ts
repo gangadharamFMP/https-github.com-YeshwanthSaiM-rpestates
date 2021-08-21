@@ -15,36 +15,27 @@ export class LandingComponent implements OnInit {
   constructor() { }
   nodes: any = [
     {
-      name: 'Yeswanth Sai',
-    
+      name: 'CH Ravi Prasad ',
       image: '',
-      title: 'Chief Executive Officer',
+      title: 'Director & Founder',
       childs: [
         {
-          name: 'Varsha',
+          name: 'Ramesh',
           cssClass: 'ngx-org-ceo',
-         
-          title: 'HR',
-          childs: [
-            {
-              name: 'Yagnesh',
-              cssClass: 'ngx-org-ceo',
-             
-              title: 'HR',
-            },
-            {
-              name: 'Bharghav',
-              cssClass: 'ngx-org-ceo',
-             
-              title: 'HR',
-            },
-            {
-              name: 'Narayana',
-              cssClass: 'ngx-org-ceo',
-             
-              title: 'HR',
-            }
-          ]
+          title: 'Marketing Director',
+          childs: []
+        },
+        {
+          name: 'Sudhakar',
+          cssClass: 'ngx-org-ceo',
+          title: 'Marketing Director',
+          childs: []
+        },
+        {
+          name: 'Vijaya Mohan',
+          cssClass: 'ngx-org-ceo',
+          title: 'Marketing Director',
+          childs: []
         }
       ]
     }]
