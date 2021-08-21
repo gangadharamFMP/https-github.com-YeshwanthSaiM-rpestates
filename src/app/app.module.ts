@@ -13,19 +13,21 @@ import { SafePipeModule } from 'safe-pipe';
 import { BrowserModule } from '@angular/platform-browser'
 import { CommonModule } from "@angular/common";
 import { DetailsComponent } from './details/details.component';
+import { NgxOrgChartModule } from 'ngx-org-chart';
 
 import {SafePipe} from './pipes/safe.pipe'
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { VirtualTourComponent } from './virtual-tour/virtual-tour.component';
 import { View3DModelComponent } from './view3-dmodel/view3-dmodel.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
     schemas:[CUSTOM_ELEMENTS_SCHEMA],
     declarations: [
         AppComponent,
         NavbarComponent,   
         DetailsComponent,  
-        SafePipe, VirtualTourComponent, View3DModelComponent, VacancyComponent, 
+        SafePipe, VirtualTourComponent, View3DModelComponent, VacancyComponent, ProfileComponent, 
     ],
     imports: [
         BrowserAnimationsModule,
@@ -36,6 +38,7 @@ import { VacancyComponent } from './vacancy/vacancy.component';
         CommonModule, 
         SafePipeModule,  
         RouterModule,
+        NgxOrgChartModule,
         AppRoutingModule,
         App1SharedModule.forRoot(), 
         ComponentsModule,

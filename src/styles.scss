@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
 @import '~ngx-org-chart/_theming.scss';
+.level1 {
+    border: 2px solid green;
+  }
 .jxPOhn{
     display: flex;
     margin-top: 14px;

@@ -8,12 +8,13 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { LoginComponent } from './examples/login/login.component';
 import {RegisterComponent } from './examples/register/register.component';
 
-import { ProfileComponent } from './examples/profile/profile.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { DetailsComponent } from './details/details.component';
 import { VirtualTourComponent } from './virtual-tour/virtual-tour.component';
 import { View3DModelComponent } from './view3-dmodel/view3-dmodel.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
+import { ProfileComponent } from './profile/profile.component';
+
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'index',                component: ComponentsComponent },
