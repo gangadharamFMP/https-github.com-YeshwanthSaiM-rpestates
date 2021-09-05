@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  hostURL:"https://rpestate-api.herokuapp.com/v1"
 };

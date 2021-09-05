@@ -8,7 +8,6 @@ import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { App1SharedModule} from '../../projects/project/src/app/app.module'
 import { SafePipeModule } from 'safe-pipe';
 import { BrowserModule } from '@angular/platform-browser'
 import { CommonModule } from "@angular/common";
@@ -21,6 +20,7 @@ import { VirtualTourComponent } from './virtual-tour/virtual-tour.component';
 import { View3DModelComponent } from './view3-dmodel/view3-dmodel.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
 import { ProfileComponent } from './profile/profile.component';
+import {UserService } from './services/user.service'
 @NgModule({
     schemas:[CUSTOM_ELEMENTS_SCHEMA],
     declarations: [
@@ -40,7 +40,6 @@ import { ProfileComponent } from './profile/profile.component';
         RouterModule,
         NgxOrgChartModule,
         AppRoutingModule,
-        App1SharedModule.forRoot(), 
         ComponentsModule,
         HttpClientModule,
         ExamplesModule,
@@ -48,7 +47,7 @@ import { ProfileComponent } from './profile/profile.component';
     ],
     exports: [
     ],
-    providers: [],
+    providers: [UserService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

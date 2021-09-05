@@ -7,7 +7,7 @@ import * as Rellax from 'rellax';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  name=localStorage.getItem("name")
   nodes: any = [
     {
       name: 'CH Ravi Prasad ',

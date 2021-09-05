@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, NavigationEnd } from "@angular/router";
+import { UserService } from "../../services/user.service";
 
 @Component({
   selector: "app-login",
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   focus1;
   mobile;
   password;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit() {
     var body = document.getElementsByTagName("body")[0];
@@ -29,14 +30,20 @@ export class LoginComponent implements OnInit {
     navbar.classList.remove("navbar-transparent");
   }
   login() {
-    let data=JSON.parse(localStorage.getItem("data"))
+    let data = {
+      phoneNumber: this.mobile,
+      password: this.password,
+    };
+    this.userService.login(data).subscribe((res: any) => {
+      console.log(res);
+      if (res.name) {
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("name", res.name);
+        this.router.navigateByUrl("details");
+      } else {
+        alert("Please enter valid credentials");
+      }
+    });
 
-    if (data && this.mobile == data.mobile && this.password == data.password) {
-       
-        localStorage.setItem("loggedIn","true")
-      this.router.navigateByUrl("details");
-    } else {
-      alert("invalid credentials");
-    }
   }
 }

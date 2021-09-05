@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { catchError } from 'rxjs/operators';
+import { UserService } from "../../services/user.service";
 
 @Component({
   selector: 'app-register',
@@ -14,7 +16,7 @@ export class RegisterComponent implements OnInit {
     password
     mobile
     cpassword
-    constructor(private router: Router) { }
+    constructor(private router: Router,private userService: UserService) { }
 
     ngOnInit() {
         var body = document.getElementsByTagName('body')[0];
@@ -33,11 +35,22 @@ export class RegisterComponent implements OnInit {
     
       let data={
         name:this.name,
-        mobile:this.password,
+        phoneNumber:this.mobile,
         password:this.cpassword
       }
-      localStorage.setItem("data",JSON.stringify(data))
-      this.router.navigateByUrl('login')
+      this.userService.register(data).subscribe((res: any) => {
+        console.log(res.status);
+        if (res.name) {
+          this.router.navigateByUrl('login')
+        } else {
+          alert("Please enter valid credentials");
+        }
+      },(err)=>{
+        console.log(err)
+        alert("Mobile registered already")
+      });
+      // localStorage.setItem("data",JSON.stringify(data))
+      // this.router.navigateByUrl('login')
       
     }
 
