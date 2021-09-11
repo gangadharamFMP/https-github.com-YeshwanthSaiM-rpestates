@@ -7,13 +7,13 @@
             <div class="content-center">
                 <h1 class="title">RP ESTATES</h1>
                 <div class="text-center">
-                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                    <a [routerLink]="['/home']" class="btn btn-primary btn-icon btn-round">
                         <i class="fab fa-facebook-square"></i>
                     </a>
-                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                    <a [routerLink]="['/home']" class="btn btn-primary btn-icon btn-round">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                    <a [routerLink]="['/home']" class="btn btn-primary btn-icon btn-round">
                         <i class="fab fa-google-plus"></i>
                     </a>
                 </div>
@@ -37,17 +37,21 @@
                             <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
                                 data-background-color="orange">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="details" role="tab">Details</a>
+                                    <a class="nav-link " data-toggle="tab" [routerLink]="['/details']"
+                                        role="tab">Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="virtual-tour" role="tab">Virtual
+                                    <a class="nav-link" data-toggle="tab" [routerLink]="['/virtual-tour']"
+                                        role="tab">Virtual
                                         Tour</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="3d-model" role="tab">3D Model</a>
+                                    <a class="nav-link" data-toggle="tab" [routerLink]="['/3d-model']" role="tab">3D
+                                        Model</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="vacancy" role="tab">Vacancy</a>
+                                    <a class="nav-link" data-toggle="tab" [routerLink]="['/vacancy']"
+                                        role="tab">Vacancy</a>
                                 </li>
                             </ul>
                         </div>
@@ -180,7 +184,7 @@
                             placeholder="Type a message..."></textarea>
                     </div>
                     <div class="send-button">
-                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
+                        <a  [routerLink]="['/home']"class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
                     </div>
                 </div>
             </div>

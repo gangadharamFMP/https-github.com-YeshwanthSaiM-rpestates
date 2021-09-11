@@ -13,6 +13,9 @@ import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
+import { ServicesPageComponent } from "./services-page/services-page.component";
+import { AboutComponent } from "./about/about.component";
+import { ContactPageComponent } from "./contact-page/contact-page.component";
 
 @NgModule({
     imports: [
@@ -22,7 +25,7 @@ import { NgbdModalBasic } from './modal/modal.component';
         NouisliderModule,
         RouterModule,
         JwBootstrapSwitchNg2Module
-      ],
+    ],
     declarations: [
         ComponentsComponent,
         BasicelementsComponent,
@@ -30,8 +33,11 @@ import { NgbdModalBasic } from './modal/modal.component';
         TypographyComponent,
         NucleoiconsComponent,
         NotificationComponent,
-        NgbdModalBasic
+        NgbdModalBasic, 
+        ServicesPageComponent,
+        AboutComponent,
+        ContactPageComponent
     ],
-    exports:[ ComponentsComponent ]
+    exports: [ComponentsComponent]
 })
 export class ComponentsModule { }
