@@ -9,6 +9,7 @@ import { environment } from "../../environments/environment";
 })
 export class UserService {
   public secretKey;
+  public isloggedIn=false
   isLoggedin = false;
   constructor(private http: HttpClient) {}
 
@@ -18,5 +19,10 @@ export class UserService {
 
   register(data) {
     return this.http.post(environment.hostURL + "/register", data);
+  }
+
+  uploadFile(data){
+    console.log("data",data)
+    return this.http.post(environment.hostURL + "/upload", data);
   }
 }

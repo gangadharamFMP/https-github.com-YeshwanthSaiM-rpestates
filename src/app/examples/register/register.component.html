@@ -54,6 +54,22 @@
                             </div>
                             <input type="password" class="form-control" placeholder="confirm password" name="cpassword" [(ngModel)]="cpassword">
                         </div>
+                        <div class="input-group no-border">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons text_caps-small"></i>
+                                </span>
+                            </div>
+                            <input type="text" placeholder="Commision Rate" class="form-control" name="commisionRate" [(ngModel)]="commisionRate">
+                        </div>
+                        <div class="input-group no-border">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons text_caps-small"></i>
+                                </span>
+                            </div>
+                            <input type="file" placeholder="Mobile No" class="form-control" (change)="upload($event)" >
+                        </div>
                         <!-- If you want to add a checkbox to this form, uncomment this code -->
 
                         <!-- <div class="checkbox">

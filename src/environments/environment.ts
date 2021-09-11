@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  hostURL:"https://rpestate-api.herokuapp.com/v1"
+  // hostURL:"https://rpestate-api.herokuapp.com/v1"
+  hostURL:"http://localhost:7000/v1"
+
 };
